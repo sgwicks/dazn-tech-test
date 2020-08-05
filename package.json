@@ -1,0 +1,29 @@
+{
+  "name": "dazn-tech-test",
+  "version": "1.0.0",
+  "description": "DAZN Tech Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgwicks/dazn-tech-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgwicks/dazn-tech-test/issues"
+  },
+  "homepage": "https://github.com/sgwicks/dazn-tech-test#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "supertest": "^4.0.2"
+  }
+}
