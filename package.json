@@ -19,7 +19,8 @@
   "homepage": "https://github.com/sgwicks/dazn-tech-test#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "knex": "^0.21.2"
+    "knex": "^0.21.2",
+    "pg": "^8.3.0"
   },
   "devDependencies": {
     "jest": "^26.2.2",
