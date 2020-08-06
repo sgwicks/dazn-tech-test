@@ -3,7 +3,8 @@ module.exports = [
         username: 'iamsam'
     },
     {
-        username: 'samiam'
+        username: 'samiam',
+        stream_count: 3
     },
     {
         username: 'iliketoeat'

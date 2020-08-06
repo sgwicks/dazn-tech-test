@@ -1,15 +1,17 @@
 const user = require('./user');
 
-module.exports = {
+const dbConfig = {
   client: 'pg',
   connection: {
-      ...user,
-      database: 'dazn_tech_test'
+    ...user,
+    database: 'dazn_tech_test'
     },
   migrations: {
-      directory: './db/migrations'
+    directory: './db/migrations'
     },
   seeds: {
-      directory: './db/seeds'
+    directory: './db/seeds'
     }
 };
+
+module.exports = dbConfig
