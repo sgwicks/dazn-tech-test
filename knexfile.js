@@ -7,6 +7,11 @@ module.exports = {
       ...user,
       database: 'dazn_tech_test'
     },
-    migrations: './db/migrations'
+    migrations: {
+      directory: './db/migrations'
+    },
+    seeds: {
+      directory: './db/seeds'
+    }
   }
 };
