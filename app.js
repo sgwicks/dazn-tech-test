@@ -1,5 +1,8 @@
+const cors = require('cors')
 const app = require('express')()
 const { PORT = 9090 } = process.env;
+
+app.use(cors())
 
 const apiRouter = require('./routes/apiRouter')
 
