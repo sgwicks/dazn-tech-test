@@ -1,4 +1,6 @@
 const app = require('express')()
+const { PORT = 9090 } = process.env;
+
 const apiRouter = require('./routes/apiRouter')
 
 app.get('/', (req, res) => {
@@ -7,8 +9,6 @@ app.get('/', (req, res) => {
 
 app.use('/api', apiRouter)
 
-app.listen(2020, () => {
-    console.log("listening on 2020")
-})
+app.listen(PORT, () => console.log(`Listening on ${PORT}...`));
 
 module.exports = app;

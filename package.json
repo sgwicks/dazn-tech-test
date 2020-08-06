@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest test",
-    "migrate-latest": "knex migrate:latest",
-    "migrate-up": "knex migrate:up",
-    "migrate-down": "knex migrate:down",
-    "migrate-rollback": "knex migrate:rollback"
+    "migrate-latest": "NODE_ENV=development knex migrate:latest",
+    "migrate-up": "NODE_ENV=development knex migrate:up",
+    "migrate-down": "NODE_ENV=development knex migrate:down",
+    "migrate-rollback": "NODE_ENV=development knex migrate:rollback",
+    "seed:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex seed:run",
+    "migrate-latest:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex migrate:latest",
+    "migrate-rollback:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex migrate:rollback",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
