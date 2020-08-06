@@ -1,3 +1,4 @@
+const ENV = process.env.NODE_ENV || 'development';
 const { DB_URL } = process.env;
 const user = require('./user');
 
@@ -33,4 +34,4 @@ const dbConfig = {
  
 };
 
-module.exports = dbConfig
+module.exports = dbConfig[ENV]
