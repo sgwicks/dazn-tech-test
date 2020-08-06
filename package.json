@@ -4,7 +4,11 @@
   "description": "DAZN Tech Test",
   "main": "index.js",
   "scripts": {
-    "test": "jest test"
+    "test": "jest test",
+    "migrate-latest": "knex migrate:latest",
+    "migrate-up": "knex migrate:up",
+    "migrate-down": "knex migrate:down",
+    "migrate-rollback": "knex migrate:rollback"
   },
   "repository": {
     "type": "git",
