@@ -12,7 +12,7 @@ describe('app', () => {
     })
     describe('/api', () => {
         describe('/streams', () => {
-            describe.only(':user_id/:stream_id', () => {
+            describe(':user_id/:stream_id', () => {
                 test('GET: returns a stream key', () => {
                     return request(app)
                         .get('/api/streams/1/12345')
