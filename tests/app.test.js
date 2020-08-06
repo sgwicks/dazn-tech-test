@@ -29,6 +29,19 @@ describe('app', () => {
                             expect(msg).toBe('Request denied: too many concurrent streams')
                         })
                 })
+                test('GET: success increases stream_count of user', () => {
+                    return request(app)
+                        .get('/api/streams/1/12345')
+                        .expect(200)
+                        .then(() => {
+                            return connection('users')
+                                .select('stream_count')
+                                .where('user_id', 1)
+                        })
+                        .then(([{stream_count}]) => {
+                            expect(stream_count).toBe(1)
+                        })
+                })
             })
         })
     })

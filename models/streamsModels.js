@@ -11,3 +11,9 @@ exports.fetchStreamCountByUserId = (user_id) => {
         .select('stream_count')
         .where('user_id', user_id)
 }
+
+exports.incrementStreamCount = (user_id) => {
+    return connection('users')
+        .where('user_id', user_id)
+        .increment('stream_count', 1)
+}
