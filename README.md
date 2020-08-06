@@ -2,6 +2,12 @@
 
 API online at: https://dazn-tech-test.herokuapp.com/
 
+Endpoints are:
+  - GET: /api/streams/:user_id/:stream_id
+  - PATCH: /api/users/:user_id
+
+See 'How it Works' below for more information on the endpoints.
+
 Built using npm with packages:
   - express.js v.4.17
   - knex.js v.0.21
@@ -44,3 +50,5 @@ This solution requires too many HTTP requests, likely to quickly overload a serv
 The solution is also not very good at reacting in real time. If delays occur in requests, it's easy to imagine a situation where requests are allowed or denied based on data that looks correct in the database but hasn't yet been properly updated due to requests waiting to be resolved.
 
 Before settling on this solution I had started looking into websockets as a potential real-time tracker of streams. Unfortunately, since I have no real experience with it, I determined it would have been unreasonable to attempt to learn it and build a solution in a reasonable time frame. I'm certain that with those skills, I could have found a much more appropriate solution, however.
+
+Due to time constraints I also didn't add any error handling, but since this is a straightforward tech test, it also didn't seem necessary for the occasion. In a more fleshed out API I would have included HTTP status code errors and error testing.
