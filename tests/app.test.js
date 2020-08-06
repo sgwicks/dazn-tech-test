@@ -42,6 +42,19 @@ describe('app', () => {
                             expect(stream_count).toBe(1)
                         })
                 })
+                test('PATCH: decrements stream count of user', () => {
+                    return request(app)
+                        .patch('/api/users/2')
+                        .expect(200)
+                        .then(() => {
+                            return connection('users')
+                                .select('stream_count')    
+                                .where('user_id', 2)
+                        })
+                        .then(([{stream_count}]) => {
+                            expect(stream_count).toBe(2)
+                        })
+                })
             })
         })
     })
